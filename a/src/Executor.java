@@ -1,9 +1,5 @@
 public class Executor {
 
-    private Military military;
-    public Executor(Military military){
-        this.military = military;
-    }
     public synchronized void change_side(int range){
         int iterator;
         if(range == 1){

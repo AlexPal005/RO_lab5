@@ -13,7 +13,7 @@ public class Main {
         military.show();
         System.out.println();
 
-        Executor executor = new Executor(military);
+        Executor executor = new Executor();
         ExecutorThread executor_thread = new ExecutorThread(executor, 1, barrier);
         ExecutorThread executor_thread2 = new ExecutorThread(executor, 2, barrier);
         new Thread(executor_thread).start();
