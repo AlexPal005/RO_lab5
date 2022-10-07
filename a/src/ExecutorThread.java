@@ -15,12 +15,12 @@ public class ExecutorThread implements Runnable{
         while(true){
             try{
                 Thread.sleep(2000);
-                barrier.await();
                 executor.show_executor(range);
+                executor.change_side(range);
+                barrier.await();
                 if(executor.is_same()){
                     break;
                 }
-                executor.change_side(range);
 
             }catch(InterruptedException | BrokenBarrierException e ){
                 System.out.println(e);
